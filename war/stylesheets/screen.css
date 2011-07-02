@@ -1,0 +1,132 @@
+/* general */
+
+h1 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+table.tight {
+  width: auto;
+  border-collapse: collapse;
+}
+table.tight td, table.tight th {
+  padding: 0;
+  margin: 0;
+}
+
+/* header */
+
+.header {
+	border: solid 1px gray;
+	background-color: silver;
+	margin-bottom: 16px;
+}
+.header > a {
+  font-size: 2em;
+  font-weight: bold;
+  color: darkred;
+  font-family: Arial Black, Arial, Sans;
+  text-decoration: none;
+}
+.header-links {
+	float: right;
+	margin: 2px 4px 0px 0px;
+}
+.header-links a {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+.header * {
+	vertical-align: middle;
+}
+.header img {
+	padding: 4px;
+}
+
+/* search bar */
+
+.searchbar table, .seachbar tr, .searchbar td, .searchbar th {
+  padding: 0;
+  margin: 0;
+}
+.searchbar table {
+	width: auto;
+}
+.searchbar select {
+	width: 200px;
+}
+.searchbar th {
+	color: darkred;
+	font-weight: bold;
+	font-size: 1.4em;
+}
+.searchbar table * {
+	vertical-align: top;
+	line-height: 1;
+}
+
+/* table */
+
+table.table {
+  width: auto;
+  border-collapse: collapse;
+}
+table.table th, table.table td {
+	margin: 0;
+	padding: 1px 4px 1px 4px;
+}
+table.table th {
+	font-weight: bold;
+	background-color: silver;
+	border: solid 1px white;
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-right: 19px;
+}
+table.table td {
+	border: solid 1px silver;
+}
+table.table th a {
+	color: black;
+	text-decoration: none;
+}
+table.table th.sort-asc, table.table th.sort-desc {
+	background-color: gray;
+}
+table.table th.sort {
+	background-image: url(../sort.gif);
+}
+table.table th.sort-asc {
+  background-image: url(../sort-asc.gif);
+}
+table.table th.sort-desc {
+  background-image: url(../sort-desc.gif);
+}
+
+/* details table */
+
+table.details {
+	width: auto;
+  border-collapse: collapse;
+}
+table.details th, table.details td {
+  margin: 0;
+  padding: 1px 4px 1px 4px;
+}
+table.details th {
+	background-color: silver;
+	border: solid 1px gray;
+	vertical-align: top;
+}
+table.details tr.odd td {
+	background-color: #ddd;
+	border: solid 1px silver;
+}
+table.details tr.even td {
+	background-color: #eee;
+	border: solid 1px silver;
+}
+table.details input, table.details button {
+	margin: 2px;
+}

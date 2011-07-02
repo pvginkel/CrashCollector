@@ -1,0 +1,87 @@
+<datastore-indexes autoGenerate="true">
+
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="Crash" ancestor="false" source="auto">
+        <property name="versionId" direction="asc"/>
+        <property name="signature" direction="desc"/>
+    </datastore-index>
+
+    <!-- Used 13 times in query history -->
+    <datastore-index kind="Version" ancestor="false" source="auto">
+        <property name="productId" direction="asc"/>
+        <property name="created" direction="desc"/>
+    </datastore-index>
+
+    <!-- Used 6 times in query history -->
+    <datastore-index kind="Crash" ancestor="false" source="auto">
+        <property name="productId" direction="asc"/>
+        <property name="hits" direction="desc"/>
+    </datastore-index>
+
+    <!-- Used 4 times in query history -->
+    <datastore-index kind="Crash" ancestor="false" source="auto">
+        <property name="productId" direction="asc"/>
+        <property name="hits" direction="asc"/>
+    </datastore-index>
+
+    <!-- Used 11 times in query history -->
+    <datastore-index kind="Crash" ancestor="false" source="auto">
+        <property name="productId" direction="asc"/>
+        <property name="signature" direction="asc"/>
+    </datastore-index>
+
+    <!-- Used 3 times in query history -->
+    <datastore-index kind="Crash" ancestor="false" source="auto">
+        <property name="productId" direction="asc"/>
+        <property name="signature" direction="desc"/>
+    </datastore-index>
+
+    <!-- Used 3 times in query history -->
+    <datastore-index kind="Report" ancestor="false" source="auto">
+        <property name="crashId" direction="asc"/>
+        <property name="created" direction="asc"/>
+    </datastore-index>
+
+    <!-- Used 4 times in query history -->
+    <datastore-index kind="Report" ancestor="false" source="auto">
+        <property name="crashId" direction="asc"/>
+        <property name="created" direction="desc"/>
+    </datastore-index>
+
+    <!-- Used 2 times in query history -->
+    <datastore-index kind="Report" ancestor="false" source="auto">
+        <property name="crashId" direction="asc"/>
+        <property name="os" direction="asc"/>
+    </datastore-index>
+
+    <!-- Used 2 times in query history -->
+    <datastore-index kind="Report" ancestor="false" source="auto">
+        <property name="crashId" direction="asc"/>
+        <property name="os" direction="desc"/>
+    </datastore-index>
+
+    <!-- Used 2 times in query history -->
+    <datastore-index kind="Report" ancestor="false" source="auto">
+        <property name="crashId" direction="asc"/>
+        <property name="cpu" direction="asc"/>
+    </datastore-index>
+
+    <!-- Used 2 times in query history -->
+    <datastore-index kind="Report" ancestor="false" source="auto">
+        <property name="crashId" direction="asc"/>
+        <property name="cpu" direction="desc"/>
+    </datastore-index>
+
+    <!-- Used 2 times in query history -->
+    <datastore-index kind="Report" ancestor="false" source="auto">
+        <property name="crashId" direction="asc"/>
+        <property name="reason" direction="asc"/>
+    </datastore-index>
+
+    <!-- Used 7 times in query history -->
+    <datastore-index kind="Report" ancestor="false" source="auto">
+        <property name="crashId" direction="asc"/>
+        <property name="reason" direction="desc"/>
+    </datastore-index>
+
+</datastore-indexes>

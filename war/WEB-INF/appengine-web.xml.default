@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+  <!-- Name of the application at http://appspot.com/. -->
+	<application>visualgit-bugs</application>
+	<!-- Version of CrashCollector. -->
+	<version>1</version>
+
+	<system-properties>
+
+	  <!-- Location of the logging.properties. -->
+		<property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
+		<!-- Title of your application. -->
+		<property name="crashcollector.application-title" value="My Application BugTracker"/>
+		<!-- Google Analytics key. -->
+		<property name="crashcollector.google-analytics-key" value="PLACE KEY HERE"/>
+		<!-- Whether or not to automatically create versions reported by the crash reporter.
+		  -- When this is set to "false", reports that do not include a version known in
+		  -- the website will be rejected. Otherwise, the version will automatically be
+		  -- added to the known versions list. -->
+		<property name="crashcollector.auto-create-version" value="true"/>
+		<!-- URL used to link issues to. "%s" in the URL will be replaced with the issue
+		  -- number. When setting issue numbers on crash reports, only numbers are supported. -->
+		<property name="crashcollector.bug-url" value="PLACE URL HERE"/>
+
+	</system-properties>
+	
+</appengine-web-app>

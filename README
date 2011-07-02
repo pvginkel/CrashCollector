@@ -1,0 +1,16 @@
+Crash Collector is a Google AppEngine website used for collecting crash reports.
+
+To submit crash reports to the Crash Collector website, a library must be
+integrated into your application. See http://github.com/pvginkel/CrashReporter.NET
+for a .NET implementation of a crash reporter library.
+
+To set up Crash Collector, you must first create a Google AppEngine website. This
+can be done at http://www.appspot.com/. The Crash Collector project is an Eclipse
+project which works best with the Google AppEngine plugin which can be found at
+http://code.google.com/appengine/docs/java/tools/eclipse.html.
+
+Before you upload the Crash Collector website, be sure to correct the application
+name. This is set in war/WEB-INF/appengine-web.xml. This file also contains other
+configuration parameters like for example an URL used to link issues to.
+
+See war/WEB-INF/appengine-web.xml.default for a default configuration.
