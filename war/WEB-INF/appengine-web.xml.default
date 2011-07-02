@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
   <!-- Name of the application at http://appspot.com/. -->
-	<application>visualgit-bugs</application>
+	<application>PLACE APPENGINE APPLICATION NAME HERE</application>
 	<!-- Version of CrashCollector. -->
 	<version>1</version>
 
