@@ -4,6 +4,8 @@ import java.io.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.jdo.*;
 import javax.servlet.http.*;
@@ -22,6 +24,7 @@ import crashcollector.data.*;
 @SuppressWarnings("serial")
 public class SubmitServlet extends HttpServlet {
 	private static final DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+	private static final Logger log = Logger.getLogger(SubmitServlet.class.getName());
 	
 	@Override
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -157,8 +160,10 @@ public class SubmitServlet extends HttpServlet {
 				pm.close();
 			}
 		} catch (IllegalStateException ex) {
+			log.log(Level.WARNING, ex.getMessage(), ex);
 			resp.sendError(500, ex.getMessage());
 		} catch (Exception ex) {
+			log.log(Level.WARNING, ex.getMessage(), ex);
 			resp.sendError(500, "Unable to process request");
 		}
 	}

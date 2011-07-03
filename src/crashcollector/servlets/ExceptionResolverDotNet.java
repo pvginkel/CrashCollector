@@ -1,5 +1,6 @@
 package crashcollector.servlets;
 
+import org.apache.commons.lang.StringUtils;
 import org.w3c.dom.*;
 
 public class ExceptionResolverDotNet extends ExceptionResolver {
@@ -57,20 +58,23 @@ public class ExceptionResolverDotNet extends ExceptionResolver {
 				sb.append(element.getAttribute("message"));
 				sb.append(" (");
 				sb.append(element.getAttribute("exception"));
-				sb.append(")\n\n");
+				sb.append(")\n");
 				
 				String stackTrace = ((Element)node).getTextContent();
 				
-				// Convert all \r\n to \n
-				
-				stackTrace = stackTrace.replace("\r", "");
-				
-				// Trim the end
-				
-				stackTrace = stackTrace.replaceAll("\\s+$", "");
-				
-				sb.append(stackTrace);
-				sb.append("\n");
+				if (!StringUtils.isBlank(stackTrace)) {
+					// Convert all \r\n to \n
+					
+					stackTrace = stackTrace.replace("\r", "");
+					
+					// Trim the end
+					
+					stackTrace = stackTrace.replaceAll("\\s+$", "");
+					
+					sb.append("\n");
+					sb.append(stackTrace);
+					sb.append("\n");
+				}
 			}
 		}
 		
@@ -86,7 +90,11 @@ public class ExceptionResolverDotNet extends ExceptionResolver {
 		for (int i = 0; i < nodes.getLength(); i++) {
 			Node node = nodes.item(i);
 			
-			if (node instanceof Element && "exception".equals(node.getNodeName())) {
+			if (
+				node instanceof Element &&
+				"exception".equals(node.getNodeName()) &&
+				!StringUtils.isBlank(node.getTextContent())
+			) {
 				return (Element)node;
 			}
 		}
